@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입폼</title>
+    <style>
+        th {
+            border: solid 1px;
+            background-color: lightgray;
+        }
+
+        td {
+            border: solid 1px;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <div style="font-size: 13px; text-align: right; width: 38%;">
+            * 필수 입력
+        </div>
+        <table cellspacing="0" cellpadding="10" style="border: solid 1px;">
+            <tr>
+                <th>* 아이디</th>
+                <td><input type="text" name="user_id">
+                    <input type="submit" name="unique" value="중복확인" 
+                        style="background-color: slategray; 
+                        font-weight: bold; color: white;">
+                    &nbsp;&nbsp;+ 4~15자, 첫 영문자, 영문자와 숫자 조합
+                </td>
+            </tr>
+            <tr>
+                <th>* 비밀번호</th>
+                <td><input type="password" name="user_pw" size="15"></td>
+            </tr>
+            <tr>
+                <th>* 비밀번호 확인</th>
+                <td><input type="password" name="check_pw" size="15">
+                    &nbsp;&nbsp;(확인을 위해 다시 입력해 주세요.)
+                </td>
+            </tr>
+            <tr>
+                <th>* 이름</th>
+                <td><input type="text" name="name"></td>
+            </tr>
+            <tr>
+                <th>생년월일</th>
+                <td>
+                    <input type="radio" name="gender" value="M"
+                        checked>남자
+                    <input type="radio" name="gender" value="W">여자
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="text" name="year" maxlength="4" size="3">년
+                    <input type="text" name="month" maxlength="2" size="1">월
+                    <input type="text" name="day" maxlength="2" size="1">일
+                    &nbsp;&nbsp;
+                    (예, 2000년 01월 31일)
+                </td>
+            </tr>
+            <tr>
+                <th rowspan="2">* 이메일</th>
+                <td>
+                    <input type="text" name="e-mail" size="15">@
+                    <input type="text" name="domain" size="15" readonly
+                        value="gmail.com">
+                    <select name="choose" id="choose">
+                        <option value="gmail.com">gmail.com</option>
+                    </select>
+                    <input type="radio" name="susin" value="yes"
+                        >수신허용
+                    <input type="radio" name="susin" value="no"
+                        checked>수신불가
+                    <tr>
+                        <td style="font-size: 12px;">
+                            ※ hanmail.net은 메일 수신이 어려울 수 있으니 
+                            가급적 다른 메일을 이용하시기 바랍니다.
+                        </td>
+                    </tr>
+                </td>
+            </tr>
+            <tr>
+                <th rowspan="3">주소</th>
+                <td>
+                    <input type="button" name="post_button" value="주소찾기"
+                    style="background-color: slategray; 
+                    font-weight: bold; color: white;">
+                    <input type="text" name="post_num" size="5" readonly>
+                    (우편번호)
+                </td>
+            </tr>
+            <tr>
+                <td><input type="text" name="address" size="80%"></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" name="addr" size="60%">
+                    &nbsp;&nbsp;+ 나머지 주소
+                </td>
+            </tr>
+            <tr>
+                <th>전화번호</th>
+                <td>
+                    <input type="text" name="phone_start" size="1"
+                        maxlength="3"> -
+                    <input type="text" name="phone_mid" size="3"
+                        maxlength="4"> -
+                    <input type="text" name="phone_end" size="3"
+                        maxlength="4">
+                </td>
+                
+            </tr>
+            <tr>
+                <th>* 휴대전화</th>
+                <td>
+                    <input type="text" name="phone_start" size="1"
+                        maxlength="3"> -
+                    <input type="text" name="phone_mid" size="3"
+                        maxlength="4"> -
+                    <input type="text" name="phone_end" size="3"
+                        maxlength="4">
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" name="SMS_susin" value="yes"
+                        checked>SMS 수신허용
+                    <input type="radio" name="SMS_susin" value="no"
+                        >SMS 수신불가
+                </td>
+            </tr>
+            <tr>
+                <th>* 관심분야</th>
+                <td>
+                    <select name="gsby" id="gsby">
+                        <option value="chs">
+                            :: 관심분야 선택 ::
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>* 가입경로</th>
+                <td>
+                    <select name="gigr" id="gigr">
+                        <option value="chos">
+                            :: 가입경로 선택 ::
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="submit" name="access" value="등록하기"
+            style="color: white; background-color: red;
+            border: solid 0px; margin-top: 15px; font-size: 20px;
+            padding-inline: 40px; padding-top: 10px; padding-bottom: 10px;
+            font-weight: bold;">
+        <input type="reset" name="access" value="새로 쓰기"
+            style="color: white; background-color: dimgray;
+            border: solid 0px; margin-top: 15px; font-size: 20px;
+            padding-inline: 40px; padding-top: 10px; padding-bottom: 10px;
+            font-weight: bold;">
+    </form>
+</body>
+</html>
